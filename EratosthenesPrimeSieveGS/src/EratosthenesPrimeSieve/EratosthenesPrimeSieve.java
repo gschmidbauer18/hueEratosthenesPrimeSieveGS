@@ -9,7 +9,19 @@ package EratosthenesPrimeSieve;
  *
  * @author 43676
  */
-public class EratosthenesPrimeSieve{
+public class EratosthenesPrimeSieve implements PrimeSieve{
+
+    
+    
+    @Override
+    public boolean isPrime(int p) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void printPrimes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     
 }
