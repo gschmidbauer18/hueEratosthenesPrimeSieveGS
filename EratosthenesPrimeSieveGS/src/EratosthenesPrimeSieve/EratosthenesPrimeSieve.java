@@ -11,7 +11,11 @@ package EratosthenesPrimeSieve;
  */
 public class EratosthenesPrimeSieve implements PrimeSieve{
 
+    private int obergrenzePrimzahlen;
     
+    public EratosthenesPrimeSieve(int pobergrenzePrimzahlen) {
+        this.obergrenzePrimzahlen=pobergrenzePrimzahlen;
+    }
     
     @Override
     public boolean isPrime(int p) {
