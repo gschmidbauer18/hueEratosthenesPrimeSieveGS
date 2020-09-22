@@ -5,27 +5,55 @@
  */
 package EratosthenesPrimeSieve;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author 43676
  */
-public class EratosthenesPrimeSieve implements PrimeSieve{
+public class EratosthenesPrimeSieve implements PrimeSieve {
 
     private int obergrenzePrimzahlen;
-    
+
     public EratosthenesPrimeSieve(int pobergrenzePrimzahlen) {
-        this.obergrenzePrimzahlen=pobergrenzePrimzahlen;
+        this.obergrenzePrimzahlen = pobergrenzePrimzahlen;
     }
-    
+
     @Override
     public boolean isPrime(int p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Boolean> zahlen=new ArrayList<Boolean>();
+        if(p<2)
+        {
+            return false;
+        }
+        
+        for(int i=0; i<=p; i++)
+        {
+            zahlen.add(i, true);
+        }
+        
+        for (int i = 2; i <= p; i++) {
+            if(zahlen.get(i).equals(true))
+            {
+                int j=i;
+                do
+                {
+                    j=j+i;
+                    if(j<=p)
+                    {
+                        zahlen.set(j, false);
+                    }
+                }while(j<=p);
+            }
+        }
+        
+        //System.out.println(zahlen.get(p--));
+        return zahlen.get(p--);
     }
 
     @Override
     public void printPrimes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
-    
 }
