@@ -53,7 +53,14 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
 
     @Override
     public void printPrimes() {
-        
+        System.out.println("Primzahlen sind:");
+        for(int i=0; i<=this.obergrenzePrimzahlen;i++)
+        {
+            if(isPrime(i)==true&&i>1)
+            {
+                System.out.print(i+",");
+            }
+        }
     }
 
 }
