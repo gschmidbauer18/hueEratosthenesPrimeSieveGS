@@ -21,6 +21,7 @@ public class NaturalNumbersWithPrime {
     
     public void numbersWithPrime()
     {
+        EratosthenesPrimeSieve eps=new EratosthenesPrimeSieve(obergrenze);
         ArrayList<Integer> evenNumbers=new ArrayList<Integer>();
         
         for (int i = 3; i <= obergrenze; i++) {
@@ -30,8 +31,40 @@ public class NaturalNumbersWithPrime {
             }
         }
         
+        
         for (int i = 0; i < evenNumbers.size(); i++) {
-            System.out.println(evenNumbers.get(i)+" summe: "+" = "+" + ");
+            for (int j = 0; j < evenNumbers.get(i); j++) {
+                if(eps.isPrime(j)==true)
+                {
+                    for (int o = 0; o < evenNumbers.get(i); o++) {
+                        if(eps.isPrime(o)==true)
+                        {
+                            if(j+o==evenNumbers.get(i))
+                            {
+                                System.out.println(evenNumbers.get(i)+" summe: "+" = "+j+" + "+o);
+                                if(i==evenNumbers.size()-1)
+                                {
+                                   o=evenNumbers.get(i);
+                                   j=evenNumbers.get(i);
+                                }
+                                else
+                                {
+                                    i++;
+                                }
+                                
+                            }
+                        }
+                        else
+                        {
+                
+                        }
+                    }
+                }
+                    else
+                    {
+                
+                    }
+            }
         }
     }
     
