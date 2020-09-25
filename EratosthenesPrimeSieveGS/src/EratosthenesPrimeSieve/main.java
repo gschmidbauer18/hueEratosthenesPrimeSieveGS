@@ -16,8 +16,8 @@ public class main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        NaturalNumbersWithPrime nnwp=new NaturalNumbersWithPrime(100);
-        nnwp.numbersWithPrime();
+        //NaturalNumbersWithPrime nnwp=new NaturalNumbersWithPrime(100);
+        //nnwp.numbersWithPrime();
     }
     
 }
